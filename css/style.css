@@ -244,6 +244,23 @@ footer{border-top:1px solid var(--line);background:var(--coal-2);padding:2.4rem 
 }
 .footer-bottom a:hover{color:var(--red-2)}
 
+/* accreditations */
+.accred{display:flex;align-items:center;gap:1.2rem;margin-top:1.5rem;flex-wrap:wrap}
+.accred img{height:64px;width:auto}
+
+/* faq */
+.faq-list{display:grid;gap:10px;margin-top:1.8rem;max-width:900px}
+.faq-item{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);transition:border-color .3s}
+.faq-item[open]{border-color:rgba(210,31,38,.5)}
+.faq-item summary{
+  list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem;
+  padding:1.05rem 1.25rem;font-weight:600;font-size:1.02rem;
+}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary svg{width:20px;height:20px;flex-shrink:0;fill:none;stroke:var(--red-2);stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round;transition:transform .3s var(--ease)}
+.faq-item[open] summary svg{transform:rotate(180deg)}
+.faq-item p{color:var(--muted);padding:0 1.25rem 1.15rem;font-size:.95rem;max-width:70ch}
+
 /* reveal */
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
 .reveal.is-in{opacity:1;transform:none}
